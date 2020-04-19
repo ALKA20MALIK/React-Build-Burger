@@ -21,8 +21,8 @@ const orderSummary =(props)=>{
         
                     <p>continue to checkout ?</p>
         
-                    <Button btnType="Danger" clicked={props.purchaeCancelled}>Cancel</Button>
-                    <Button btnType="Success" clicked={props.purchaeContinued}>Continue</Button>
+                    <Button btnType="Danger" clicked={props.purchaseCancelled}>Cancel</Button>
+                    <Button btnType="Success" clicked={props.purchaseContinued}>Continue</Button>
         
                 </Auxiliary>
             )
