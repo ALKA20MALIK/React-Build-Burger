@@ -6,7 +6,7 @@ const input = (props) => {
     let inputElement = null;
 
     const inputClasses=[classes.InputElement];
-    
+
     if(props.invalid && props.shouldValidate && props.touched){
         inputClasses.push(classes.Invalid)
 
@@ -36,7 +36,7 @@ const input = (props) => {
             break;
         default:
             inputElement = <input
-                className={inputClasses.join(' ')} className={inputClasses.join(' ')}
+                className={inputClasses.join(' ')}
                 {...props.elementConfig}
                 value={props.value} onChange={props.changed}/>;
     }

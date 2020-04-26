@@ -8,7 +8,6 @@ import Spinner from '../../components/UI/LoadSpinner/LoadSpinner';
 
 class Orders extends Component {
     componentDidMount() {
-        console.log('order:', this.props)
         this.props.onFetchOrders();
     }
 

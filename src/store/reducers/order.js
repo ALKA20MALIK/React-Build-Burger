@@ -8,7 +8,6 @@ const initialState = {
 const reducer = (state = initialState, action) => {
     switch (action.type) {
         case actionTypes.PURCHASE_INIT:
-            debugger
             return {
                 ...state,
                 purchased: false
@@ -23,7 +22,6 @@ const reducer = (state = initialState, action) => {
                 ...action.orderData,
                 id: action.orderId,
             }
-            console.log('newOrder: ', newOrder)
             return {
                 ...state,
                 loading: false,
@@ -37,7 +35,6 @@ const reducer = (state = initialState, action) => {
                 loading: false
             }
         case actionTypes.FETCH_ORDERS_START:
-            debugger
             return {
                 ...state,
                 loading: true
@@ -48,15 +45,14 @@ const reducer = (state = initialState, action) => {
                 orders:action.orders,
                 loading:false
             }
-        case actionTypes.FETCH_ORDERS_SUCCESS:
+        case actionTypes.FETCH_ORDERS_FAIL:
             return {
                 ...state,
                 loading:false
             }
         default:
-            return {
-                ...state
-            }
+            return state;
+
     }
 }
 export default reducer
