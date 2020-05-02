@@ -38,7 +38,6 @@ class BurgerBuilder extends Component {
         }
         else
         {
-            debugger
             this.props.onSetAuthRedirectPath('/checkout');
             this.props.history.push('/auth');
         }
